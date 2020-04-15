@@ -1,0 +1,81 @@
+<!-- CITATION: Code for this page was obtained from the following website https://js.syncfusion.com/demos/jquery/#!/azure/chart/pie 
+and edited for purposes of this project
+
+Code contains Student Statistics (hardcoded) for Scholarships -->
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/17.4.0.46/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
+    <link href="17.4.0.46/themes/web/content/default.css" rel="stylesheet" />
+    <link href="17.4.0.46/themes/web/content/default-responsive.css" rel="stylesheet" />
+ 
+    <script type="text/javascript" src="https://cdn.syncfusion.com/js/assets/external/jquery-2.1.4.min.js"></script>    
+	 
+    <script type="text/javascript" src="https://cdn.syncfusion.com/17.4.0.46/js/web/ej.web.all.min.js"></script>
+    <script src="17.4.0.46/scripts/web/properties.js" type="text/javascript"></script>
+ </head>
+ <body>  
+	<div class="content-container-fluid">      
+        <div class="row">                
+            <div class="cols-sample-area">                                  				
+				<div id="container"></div> 					                   
+            </div>				
+        </div>
+	</div>
+ <script type="text/javascript" language="javascript">
+	$(function () 
+	{ 
+        $("#container").ejChart(
+        
+        {	
+			//Initializing Series <!-- Code for the labels and sizing of each slice in the pie chart-->
+            series: 
+			[
+				{
+                    points: [{ x: 'Not Applied', y: 94658, text: 'Not Applied, 88.47%' },
+                             { x: 'Students Applied', y: 9090, text: 'Students Applied, 8.49%' },
+							 { x: 'Students Accepted', y: 2577, text: 'Students Accepted, 2.40%' },
+                             { x: 'Pending Approval', y: 473, text: 'Pending Approval, 0.44%' },
+                             { x: 'Students Nominated', y: 120, text: 'Nominated Students, 0.11%' },
+                             { x: 'Students Rejected', y: 70, text: 'Students Rejected, 0.06%' }],                         
+                    marker: 
+					{
+                        dataLabel: 
+						{
+							visible:true,
+                            shape: 'none', 
+							connectorLine: { type: 'bezier',color: 'black' },
+                            font: {size:'14px'}
+						}
+                    },
+                    border :{width:2, color:'white'}, 
+                    name: 'Expenses', 
+					type: 'pie', 
+					enableAnimation : true, 
+					labelPosition:'outsideExtended', 
+                    pieCoefficient:0.6,
+					smartLabelEnabled:true, startAngle:145
+                }
+            ],
+            load: "loadTheme",
+			seriesRendering:"seriesRender",
+            title:{text: 'Overall Statistics for Student Scholarships'},
+            canResize: true,
+            size: { height: "600"},
+            legend: { visible: true}
+        });				
+    });
+	
+	function seriesRender(sender)
+	{
+		if(sender.model.theme=="flatdark" || sender.model.theme=="gradientdark")
+		sender.data.series.marker.dataLabel.connectorLine.color="white";
+	}
+ </script>    
+ </body>
+</html>
+
+
