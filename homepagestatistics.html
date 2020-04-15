@@ -1,0 +1,78 @@
+<!-- CITATION: Used code from https://js.syncfusion.com/demos/jquery/#!/azure/chart/chartaxes/logaxis 
+and altered it for the purpose of the project
+
+Optional Statistics (hardcoded) for total number of users on the system per day 
+MIGHT NOT BE INCLUDED IN FINALIALISED VERSION OF SYSTEM-->
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/17.4.0.46/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
+    <link href="17.4.0.46/themes/web/content/default.css" rel="stylesheet" />
+    <link href="17.4.0.46/themes/web/content/default-responsive.css" rel="stylesheet" />
+ 
+    <script type="text/javascript" src="https://cdn.syncfusion.com/js/assets/external/jquery-2.1.4.min.js"></script>    
+	 
+    <script type="text/javascript" src="https://cdn.syncfusion.com/17.4.0.46/js/web/ej.web.all.min.js"></script>
+	<script src="17.4.0.46/scripts/web/properties.js" type="text/javascript"></script>
+ </head>
+ <body>
+	<div class="content-container-fluid">      
+        <div class="row">                
+            <div class="cols-sample-area">                                  				
+				<div id="container"></div> 					                   
+            </div>				
+        </div>
+    </div>
+ <script type="text/javascript" language="javascript">
+    $(function () 
+	{
+        $("#container").ejChart(
+        {	
+			//Initializing Primary X Axis	 
+            primaryXAxis:
+            {
+                title: { text: 'Hour' },
+                range:{ min: 00, max:23,interval:1}                                
+            },  
+			
+			//Initializing Primary Y Axis	
+			primaryYAxis:
+            {
+                  valueType: "logarithmic",
+                minorTicksPerInterval: 5,
+                range: { min: 10, max: 1000, interval: 1 },
+                majorGridLines: { width: 1.5, opacity: 0.8 },
+                minorGridLines:{ visible: true },
+				minorTickLines:{ width: 1, size: 4, visible: true },
+                title: { text: 'Number of Users Online' },
+                
+            },  
+            
+			//Initializing Series <!-- Each data point on the log graph-->
+			series: 
+			[ 
+				{
+                    points: [{ x: 0, y: 80 }, { x: 3, y: 200 }, { x: 4, y: 400 }, { x: 9, y: 600 }, 
+							 { x: 14, y: 600 }, { x: 17, y: 700 }, { x: 18, y: 400 }, { x: 19, y: 200 }, 
+							 { x: 20, y: 250 }, { x: 21, y: 220 }, { x: 23, y: 220 }],
+                    type: 'line',
+					border :{width:3},
+					tooltip:{visible:true}, 
+					enableAnimation :true
+                }
+			],
+            title :{text: 'Total Number of Online Visitors Per Day'},
+			load:"loadTheme",
+			canResize:true,
+			size: { height: "600" },
+			legend:{visible:false}
+        });
+    });
+ </script>       
+ </body>
+</html>
+
+
