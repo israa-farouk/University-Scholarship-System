@@ -46,10 +46,9 @@
                                 <div class="main-menu  d-none d-lg-block">
                                     <nav>
                                         <ul id="navigation">
-                                            <li><a href="Homepage.html"><big>Home</big></a></li>
-                                            <li><a href="student_page.html"><big>My Account</big></a></li>
-                                            
-                                            <li><a href="contact.html"><big>Contact Us</big></a></li>
+                                            <li><a href="Homepage.html"><big>Home</big></a></li>            <!--The Home button at the top -->
+                                            <li><a href="student_page.html"><big>My Account</big></a></li>  <!--My Account button-->
+                                            <li><a href="contact.html"><big>Contact Us</big></a></li>   <!--Contact us button-->
                                         </ul>
                                     </nav>
                                 </div>
@@ -95,7 +94,7 @@
                 <div class="col-md-6 col-lg-3">
                     <div class="single_candidates text-center" style="height:262px;">
                         <div class="thumb">
-                            <img src="img/candiateds/user100x100.png" alt style="padding-top: 40px;">
+                            <img src="img/candiateds/user100x100.png" alt style="padding-top: 40px;">       <!--Student image that appears on the page -->
                         </div>
                         
                         
@@ -108,9 +107,9 @@
                                                                        margin-bottom: 30px;
                                                                        padding-right: 20px;
                                                                        width: 640px;">
-                    <h4 style="margin-top: 0px; text-align: left;"><b>Student Information</b></h4>
+                    <h4 style="margin-top: 0px; text-align: left;"><b>Student Information</b></h4>      
 
-                    <div><ul><li style="text-align: left;"><object data="studentinfo.txt"></object></li></ul></div>   
+                    <div><ul><li style="text-align: left;"><object data="studentinfo.txt"></object></li></ul></div>   <!--The student information file path-->
 
                     </div>
                 </div>
@@ -119,11 +118,7 @@
     </div>   
     </div> <!--/ END -->
 
-
-
-
-
-    <div class="job_details_area" style="padding-top: 50px;">
+    <div class="job_details_area" style="padding-top: 50px;">                   <!-- The beginning of eligible scholarship list and details-->
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
@@ -132,10 +127,10 @@
                         <div class="single_jobs white-bg d-flex justify-content-between">
                             <div class="jobs_left d-flex align-items-center">
                                 <div class="thumb">
-                                    <img src="img/svg_icon/download.png" alt="">
+                                    <img src="img/svg_icon/download.png" alt="">                <!--scholarship icon-->
                                 </div>
                                 <div class="jobs_conetent">
-                                    <a href="#"><h4>Emerging Scholarship</h4></a>
+                                    <a href="#"><h4>Emerging Scholarship</h4></a>           <!--Firt scholarship area start-->
                                     <div class="links_locat d-flex align-items-center">
                                         <div class="location">
                                             <p> Donor - Government of Alberta</p>
@@ -188,12 +183,9 @@
                                 <li>Students that miss the deadline need to contact the university.</li>
                             </ul>
                         </div>
+                    </div>                      <!--First scholarship area end-->
 
-
-
-                    </div>
-
-                    <div class="single_jobs white-bg d-flex justify-content-between">
+                    <div class="single_jobs white-bg d-flex justify-content-between">       <!--Second schoalrship area start-->
                         <div class="jobs_left d-flex align-items-center">
                             <div class="thumb">
                                 <img src="img/svg_icon/download.png" alt="">
@@ -250,19 +242,11 @@
                             <li>Fall: October 31<sup>st</sup></li>
                             <li>Students that miss the deadline need to contact the university.</li>
                         </ul>
-                    </div>
-
-                    
+                    </div>    
                 </div>
+                </div>                  <!--Second scholarship area end-->
 
-
-
-                </div>
-
-
-
-
-                <div class="single_jobs white-bg d-flex justify-content-between" style = "width: 730px;">
+                <div class="single_jobs white-bg d-flex justify-content-between" style = "width: 730px;">   <!--Awards received area start-->
                     <div class="jobs_left d-flex align-items-center">
 
                         <div class="jobs_conetent">
@@ -288,17 +272,13 @@
                     <div class="jobs_right">
                         <div class="apply_now">
                             
-                            <a href="#" class="boxed-btn3" onclick="return confirm('******Award Accepted!******')">Accept</a>
-                            <a href="#" class="boxed-btn3" onclick="return confirm('******Award Rejected!******')">Reject</a>
+                            <a href="#" class="boxed-btn3" onclick="return confirm('******Award Accepted!******')">Accept</a>   <!--Accept button-->
+                            <a href="#" class="boxed-btn3" onclick="return confirm('******Award Rejected!******')">Reject</a>   <!--Reject button-->
                         </div>
                     </div>
                 </div>
-
-
-
-
-                    
-                    <div class="apply_job_form white-bg">
+      
+                    <div class="apply_job_form white-bg">           <!-- Schoalrship Application area-->
                         <h4>Apply for the awards now</h4>
                         <form action="#">
                             <div class="row">
@@ -312,7 +292,7 @@
                                         <input type="text" placeholder="University Email" id = email>
                                     </div>
                                 </div>
-                                <div class="input-group-icon mt-10">
+                                <div class="input-group-icon mt-10">            <!--Scholarship list from drop down menu-->
                                     <div class="icon"><i class="fa fa-trophy" aria-hidden="true"></i></div>
                                     <div class="form-select" tabindex="0" style="left: 15px; margin-bottom: 20px;">
                                         <select id="ScholarshipName">
@@ -329,7 +309,7 @@
                                 <div class="col-md-12">
                                     
                                 </div>
-                                <div class="col-md-12">
+                                <div class="col-md-12">         <!--File upload-->
                                     <div class="input-group">
                                         <form id = "myform" method = "post" enctype="multipart/form-data">
                                             <p style="padding-top: 1px;padding-left: 5px;"> Upload Essay (Optional) .docx, .doc or .pdf </p> 
@@ -338,9 +318,6 @@
                                     </form>
                                 </div>
                             </div>
-
-
-
 
                                 <div class="col-md-12">
                                     <div class="submit_btn">
@@ -351,8 +328,6 @@
                         </form>
                     </div>
                 </div>
-
-                  
     <footer class="footer">
         <div class="footer_top">
             <div class="container">
@@ -528,9 +503,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         newLink.click(); 
     }
 </script>
-
-
- 
 
 </body>
 
