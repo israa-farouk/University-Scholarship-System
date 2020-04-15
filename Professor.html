@@ -1,0 +1,498 @@
+<!-- CITATION: Used the following code http://jkorpela.fi/forms/file.html which implements the upload button
+    on the Nomination Application form and displays the uploaded file or number of files (in the case more than 1 file is uploaded) -->
+
+<html class="js sizes customelements history pointerevents postmessage webgl websockets cssanimations csscolumns csscolumns-width csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth csscolumns-breakbefore csscolumns-breakafter csscolumns-breakinside flexbox picture srcset webworkers sizes customelements history pointerevents postmessage webgl websockets cssanimations csscolumns csscolumns-width csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth csscolumns-breakbefore csscolumns-breakafter csscolumns-breakinside flexbox picture srcset webworkers sizes customelements history pointerevents postmessage webgl websockets cssanimations csscolumns csscolumns-width csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth csscolumns-breakbefore csscolumns-breakafter csscolumns-breakinside flexbox picture srcset webworkers" lang="zxx"><head><style>.dismissButton{background-color:#fff;border:1px solid #dadce0;color:#1a73e8;border-radius:4px;font-family:Roboto,sans-serif;font-size:14px;height:36px;cursor:pointer;padding:0 24px}.dismissButton:hover{background-color:rgba(66,133,244,0.04);border:1px solid #d2e3fc}.dismissButton:focus{background-color:rgba(66,133,244,0.12);border:1px solid #d2e3fc;outline:0}.dismissButton:hover:focus{background-color:rgba(66,133,244,0.16);border:1px solid #d2e2fd}.dismissButton:active{background-color:rgba(66,133,244,0.16);border:1px solid #d2e2fd;box-shadow:0 1px 2px 0 rgba(60,64,67,0.3),0 1px 3px 1px rgba(60,64,67,0.15)}.dismissButton:disabled{background-color:#fff;border:1px solid #f1f3f4;color:#3c4043}
+</style><style>.gm-style .gm-style-mtc label,.gm-style .gm-style-mtc div{font-weight:400}
+</style><style>.gm-control-active>img{box-sizing:content-box;display:none;left:50%;pointer-events:none;position:absolute;top:50%;transform:translate(-50%,-50%)}.gm-control-active>img:nth-child(1){display:block}.gm-control-active:hover>img:nth-child(1),.gm-control-active:active>img:nth-child(1){display:none}.gm-control-active:hover>img:nth-child(2),.gm-control-active:active>img:nth-child(3){display:block}
+</style><link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Google+Sans:400,500,700"><style>.gm-ui-hover-effect{opacity:.6}.gm-ui-hover-effect:hover{opacity:1}
+</style><style>.gm-style .gm-style-cc span,.gm-style .gm-style-cc a,.gm-style .gm-style-mtc div{font-size:10px;box-sizing:border-box}
+</style><style>@media print {  .gm-style .gmnoprint, .gmnoprint {    display:none  }}@media screen {  .gm-style .gmnoscreen, .gmnoscreen {    display:none  }}</style><style>.gm-style-pbc{transition:opacity ease-in-out;background-color:rgba(0,0,0,0.45);text-align:center}.gm-style-pbt{font-size:22px;color:white;font-family:Roboto,Arial,sans-serif;position:relative;margin:0;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}
+</style><style>.gm-style img{max-width: none;}.gm-style {font: 400 11px Roboto, Arial, sans-serif; text-decoration: none;}</style><style>.dismissButton{background-color:#fff;border:1px solid #dadce0;color:#1a73e8;border-radius:4px;font-family:Roboto,sans-serif;font-size:14px;height:36px;cursor:pointer;padding:0 24px}.dismissButton:hover{background-color:rgba(66,133,244,0.04);border:1px solid #d2e3fc}.dismissButton:focus{background-color:rgba(66,133,244,0.12);border:1px solid #d2e3fc;outline:0}.dismissButton:hover:focus{background-color:rgba(66,133,244,0.16);border:1px solid #d2e2fd}.dismissButton:active{background-color:rgba(66,133,244,0.16);border:1px solid #d2e2fd;box-shadow:0 1px 2px 0 rgba(60,64,67,0.3),0 1px 3px 1px rgba(60,64,67,0.15)}.dismissButton:disabled{background-color:#fff;border:1px solid #f1f3f4;color:#3c4043}
+</style><style>.gm-style .gm-style-mtc label,.gm-style .gm-style-mtc div{font-weight:400}
+</style><style>.gm-control-active>img{box-sizing:content-box;display:none;left:50%;pointer-events:none;position:absolute;top:50%;transform:translate(-50%,-50%)}.gm-control-active>img:nth-child(1){display:block}.gm-control-active:hover>img:nth-child(1),.gm-control-active:active>img:nth-child(1){display:none}.gm-control-active:hover>img:nth-child(2),.gm-control-active:active>img:nth-child(3){display:block}
+</style><link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Google+Sans:400,500,700"><style>.gm-ui-hover-effect{opacity:.6}.gm-ui-hover-effect:hover{opacity:1}
+</style><style>.gm-style .gm-style-cc span,.gm-style .gm-style-cc a,.gm-style .gm-style-mtc div{font-size:10px;box-sizing:border-box}
+</style><style>@media print {  .gm-style .gmnoprint, .gmnoprint {    display:none  }}@media screen {  .gm-style .gmnoscreen, .gmnoscreen {    display:none  }}</style><style>.gm-style-pbc{transition:opacity ease-in-out;background-color:rgba(0,0,0,0.45);text-align:center}.gm-style-pbt{font-size:22px;color:white;font-family:Roboto,Arial,sans-serif;position:relative;margin:0;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}
+</style><style>.gm-style img{max-width: none;}.gm-style {font: 400 11px Roboto, Arial, sans-serif; text-decoration: none;}</style><style>.dismissButton{background-color:#fff;border:1px solid #dadce0;color:#1a73e8;border-radius:4px;font-family:Roboto,sans-serif;font-size:14px;height:36px;cursor:pointer;padding:0 24px}.dismissButton:hover{background-color:rgba(66,133,244,0.04);border:1px solid #d2e3fc}.dismissButton:focus{background-color:rgba(66,133,244,0.12);border:1px solid #d2e3fc;outline:0}.dismissButton:hover:focus{background-color:rgba(66,133,244,0.16);border:1px solid #d2e2fd}.dismissButton:active{background-color:rgba(66,133,244,0.16);border:1px solid #d2e2fd;box-shadow:0 1px 2px 0 rgba(60,64,67,0.3),0 1px 3px 1px rgba(60,64,67,0.15)}.dismissButton:disabled{background-color:#fff;border:1px solid #f1f3f4;color:#3c4043}
+</style><style>.gm-style .gm-style-mtc label,.gm-style .gm-style-mtc div{font-weight:400}
+</style><style>.gm-control-active>img{box-sizing:content-box;display:none;left:50%;pointer-events:none;position:absolute;top:50%;transform:translate(-50%,-50%)}.gm-control-active>img:nth-child(1){display:block}.gm-control-active:hover>img:nth-child(1),.gm-control-active:active>img:nth-child(1){display:none}.gm-control-active:hover>img:nth-child(2),.gm-control-active:active>img:nth-child(3){display:block}
+</style><link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Google+Sans:400,500,700"><style>.gm-ui-hover-effect{opacity:.6}.gm-ui-hover-effect:hover{opacity:1}
+</style><style>.gm-style .gm-style-cc span,.gm-style .gm-style-cc a,.gm-style .gm-style-mtc div{font-size:10px;box-sizing:border-box}
+</style><style>@media print {  .gm-style .gmnoprint, .gmnoprint {    display:none  }}@media screen {  .gm-style .gmnoscreen, .gmnoscreen {    display:none  }}</style><style>.gm-style-pbc{transition:opacity ease-in-out;background-color:rgba(0,0,0,0.45);text-align:center}.gm-style-pbt{font-size:22px;color:white;font-family:Roboto,Arial,sans-serif;position:relative;margin:0;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}
+</style><style>.gm-style img{max-width: none;}.gm-style {font: 400 11px Roboto, Arial, sans-serif; text-decoration: none;}</style>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Professor</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/icons8-scholarship-32.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+<script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/40/5/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/40/5/util.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/40/5/map.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/40/5/stats.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/40/5/onion.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/40/5/controls.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/40/5/marker.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/40/5/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/40/5/util.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/40/5/map.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/40/5/stats.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/40/5/onion.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/40/5/controls.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/40/5/marker.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/40/5/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/40/5/util.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/40/5/map.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/40/5/stats.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/40/5/onion.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/40/5/controls.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/40/5/marker.js"></script></head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid ">
+                    <div class="header_bottom_border">
+                        <div class="row align-items-center">
+                            <div class="col-xl-3 col-lg-2">
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-7">
+                                <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <!-- Create the Header buttons on the Professor page and link it to other pages in
+                                    the system-->
+                                    <ul id="navigation">
+                                        <li><a href="Homepage.html"><big>Home</big></a></li> 
+                                        <li><a href="Professor.html"><big>My Account</big></a></li>
+                                        <li><a href="#"><big>Browse Scholarships</big></a></li>
+                                        <li><a href="#nomapp"><big>Nominate Students</big></a></li>
+                                        <li><a href="Homepage.html"><big>Log out</big></a></li>
+                                    </ul>
+                                </nav>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+
+    <!-- bradcam_area  -->
+    <div class="bradcam_area bradcam_bg_1">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text">
+                        <h3>Nominate a Student</h3> <!-- Create Header for Professor Page -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ bradcam_area  -->
+
+    <div class="job_details_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="job_details_header">
+                        <div class="single_jobs white-bg d-flex justify-content-between">
+                            <div class="jobs_left d-flex align-items-center">
+                                <div class="thumb">
+                                    <img src="img/svg_icon/1.svg" alt="">
+                                </div>
+                                <div class="jobs_conetent">
+                                    <a href="#"><h4>Student Scholarship Nomination</h4></a> <!-- Header for Student Nomination Criteria-->
+                                    <div class="links_locat d-flex align-items-center">
+                                        <div class="location">
+                                        </div>
+                                        <div class="location">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="jobs_right">
+                                <div class="apply_now">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="descript_wrap white-bg">
+                        <div class="single_wrap">
+                            <h4>Nominate a Student</h4> <!-- The Student Criteria to be met created as a list-->
+                            <p>To nominate students for a scholarship, ensure you have completed a nomination application. This includes:</p>
+                            <ul>
+                                <!-- Note that we assume that the Professor has already obtained Student Consent before
+                                filling out the Nomination Application-->
+                                <li>Obtaining the consent of the student who you are nominating.</li>
+                                <li>A clear and reasonable 200-300 word rationale for the nomination.</li>
+                                <li>Any supporting documents or reference letters that might be of relevance.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="single_wrap">
+                            <h4>Nominator Criteria </h4> <!-- Header for Nominator (Professor) Criteria to be met-->
+                            <p>To qualify as a nominator, you must:</p>
+                            <ul>
+                                <li>Be a current faculty member within good standing at the university</li>
+                                <li>Not be a close family member, relative or friend of the nominated student</li>
+                                <li>Have a valid @emerginguniversity.ca email address</li>
+                            </ul>
+                        </div>
+                        <!--Create a Button to nominate a student, the Professor (user of the page) is
+                        redirected to the Nomination Application below-->
+                        
+                            <a href="#nomapp" class="genric-btn primary circle arrow">
+                                Nominate a Student Now!
+                                <span class="lnr lnr-arrow-right"></span></a>
+                        
+                    </div>
+                    <div class="apply_job_form white-bg">
+                        <a id="nomapp"></a><h4>Nomination Application</h4></a> <!-- Header for Nomination Application-->
+                        <form action="#">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="input_field">
+                                        <!-- Text Field to Enter the Nominated Student's Name-->
+                                        <input type="text" placeholder="Student Name" id = stuName>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input_field">
+                                        <!-- Text Field to Enter the Nominated Student's ID-->
+                                        <input type="text" placeholder="Student ID" id = stuID>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="input_field">
+                                        <!-- Text Field to Enter the Scholarship Listing Number from the list of Scholarships available
+                                        i.e. what the student is eligible for-->
+                                        <input type="text" placeholder="Scholarship Listing Number" id = scholListNum>
+                                    </div>
+                                </div>
+                                <div class="input-group-icon mt-10">
+                                    <div class="icon"><i class="fa fa-trophy" aria-hidden="true"></i></div>
+                                    <div class="form-select">
+                                        <!-- Drop Down Select List to choose the type of scholarship by degree type-->
+                                        <select id="stuType">
+                                        <option value="None Selected">Type of Scholarship</option>
+                                        <option value="Undergraduate">Undergraduate</option>
+                                        <option value="Masters">Masters</option>
+                                        <option value="PhD">PhD</option>
+                                        <option value="Post Graduate">Post Graduate</option>
+                                        <option value="Any">Any</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="input-group-icon mt-10">
+                                    <div class="icon"><i class="fa fa-flask" aria-hidden="true"></i></div>
+                                    <div class="form-select">
+                                        <!-- Drop Down Select List to choose the type of scholarship by Faculty type-->
+                                        <select id="stuFac">
+                                        <option value="None Selected">Department / Faculty</option>
+                                        <option value="Faculty of Science">Faculty of Science</option>
+                                        <option value="Faculty of Arts">Faculty of Arts</option>
+                                        <option value="Faculty of Business">Faculty of Business</option>
+                                        <option value="Faculty of Nursing">Faculty of Nursing</option>
+                                        <option value="Faculty of Education">Faculty of Education</option>
+                                        <option value="Faculty of Engineering">Faculty of Engineering</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="input-group">
+                                        <form id="myForm" method="post" enctype="multipart/form-data">
+                                            <!-- Upload Field where the Professor can upload supporting documents;
+                                            if one document is chosen only- the file name is visible, else if more than one file is uploaded
+                                            the number of files is displayed instead. The functionality of this is implemented at the end of the overall code-->
+                                            <p>Upload Supporting Documents: </p> 
+                                                <input type="file" id="files" name="files" multiple accept="image/*, .doc, .docx, .pdf" style = "margin-left : 5;"><br/>
+                                            <div id="selectedFiles"></div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="input_field">
+                                        <!--Text Field to enter a short rationale for the students nomination-->
+                                        <textarea name="#" id="nominRat" cols="30" rows="10" placeholder="Rationale For Nomination"></textarea>
+                                    </div>
+                                </div>
+                                <div class="switch-wrap d-flex justify-content-between">
+                                    <p style="
+    margin-left: 15px;
+">Has the student provided consent for this nomination?</p>
+                                    <div class="primary-checkbox">
+                                        <!--Check-box field (checked yes always) to indicate that the professor must have obtained the students consent
+                                        prior to filling out the Nomination Application-->
+                                        <input type="checkbox" checked="" id="stuConsent">
+                                        <label for="primary-checkbox"></label>
+                                       
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="submit_btn">
+                                        <!--Button to SUBMIT the Nomination Application- onclick this will save the details filled out in the application
+                                        to a .txt file; see the saveFile() function defined at the end of the overall code-->
+                                        <button class="boxed-btn3 w-100" type="submit" onclick="saveFile()">Nominate</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="job_sumary">
+                        <div class="summery_header">
+                            <h3>Dates and Deadlines</h3> <!--Header for the side text bar on the page-->
+                        </div>
+                        <div class="job_content">
+                            <ul>
+                                <!--Paragraph indicating nomination dates-->
+                                <p>Nominations for 2019-2020 are now open! Please be advised Nominations for the Academic Year 2020-2021 open November 2020.</p>
+                            </ul>
+                        </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer start -->
+                      
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-md-6 col-lg-3">
+                        <div class="footer_widget wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                            <div class="footer_logo">
+                                <a href="#">
+                                    <img src="1.png" alt=""> <!--Image included in the Footer of the Professor Page-->
+                                </a>
+                            </div>
+                            <p> <!-- Text indication arbitrary contact for the University System we created-->
+                                studentscholarships@support.com<br>
+                                +403 220 5333 <br>
+                                2500 University Dr NW, Calgary, AB T2N 1N4
+                            </p>
+                            <div class="socail_links"> <!--Social Media Links in the Footer- not linked to anything, buttons just for aesthetic-->
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-google-plus"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-lg-2">
+                        <div class="footer_widget wow fadeInUp" data-wow-duration="1.1s" data-wow-delay=".4s">
+                            <h3 class="footer_title"> <!--Quicklinks to other webpages in our System-->
+                                Quick links
+                            </h3>
+                            <ul>
+                                <li><a href="Homepage.html">Home Page</a></li>
+                                <li><a href="Homepage.html"> Available Scholarships</a></li>
+                                <li><a href="student_page.html">Scholarship Eligibility</a></li>
+                                <li><a href="contact.html">Website Feedback</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-3">
+                        <div class="footer_widget wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s">
+                            <h3 class="footer_title">
+                                Search Scholarships By Faculty <!--Searching scholarships for each faculty links to Hompage where search facility is implemented-->
+                            </h3>
+                            <ul>
+                                <li><a href="Homepage.html">Arts</a></li>
+                                <li><a href="Homepage.html">Business & Law</a></li>
+                                <li><a href="Homepage.html">Education</a></li>
+                                <li><a href="Homepage.html">Engineering</a></li>
+                                <li><a href="Homepage.html">Science</a></li>
+                                <li><a href="Homepage.html">Nursing</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 col-lg-4">
+                        <div class="footer_widget wow fadeInUp" data-wow-duration="1.3s" data-wow-delay=".6s">
+                            <h3 class="footer_title"> <!--Subscription in Footer is for aesthetic- no feature implemented will redirect to top of Professor page-->
+                                Know when a Scholarship is Available, Subscribe: 
+                            </h3>
+                            <form action="#" class="newsletter_form">
+                                <input type="text" placeholder="Enter your university email">
+                                <button type="submit">Subscribe</button>
+                            </form>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right_text wow fadeInUp" data-wow-duration="1.4s" data-wow-delay=".3s">
+            <div class="container">
+                <div class="footer_border"></div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <p class="copy_right text-center">
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--/ footer end  -->
+
+
+    <!-- link that opens popup -->
+    <!-- JS here -->
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/scrollIt.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/nice-select.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/gijgo.min.js"></script>
+
+
+
+    <!--contact js-->
+    <script src="js/contact.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
+
+
+    <script src="js/main.js"></script>
+     <!-- Code for Upload Field in Nomination Application, citation made at beginning of code-->
+    <script>
+        var selDiv = "";
+            
+        document.addEventListener("DOMContentLoaded", init, false);
+        
+        function init() {
+            document.querySelector('#files').addEventListener('change', handleFileSelect, false);
+            selDiv = document.querySelector("#selectedFiles");
+        }
+            
+        function handleFileSelect(e) {
+            
+            if(!e.target.files || !window.FileReader) return;
+    
+            selDiv.innerHTML = "";
+            
+            var files = e.target.files;
+            var filesArr = Array.prototype.slice.call(files);
+            filesArr.forEach(function(f) {
+                var f = files[i];
+                if(!f.type.match("image.*")) {
+                    return;
+                }
+    
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    var html = "<img src=\"" + e.target.result + "\">" + f.name + "<br clear=\"left\"/>";
+                    selDiv.innerHTML += html;				
+                }
+                reader.readAsDataURL(f); 
+            });
+            
+        }
+        </script>
+        <!--End of Upload Field code in Nomination Application-->
+    
+
+</body>
+<!-- Code for Saving Nomination Application to .txt file -->
+<script> 
+    let saveFile = () => {
+    	
+        // Get the data from each element on the form.
+    	const studentName = document.getElementById('stuName');
+        const studentID= document.getElementById('stuID');
+        const scholarshipLNumber= document.getElementById('scholListNum');
+        const studentType = document.getElementById('stuType');
+        const studentFaculty = document.getElementById('stuFac');
+        const supportingFiles = document.getElementById('files');
+        const nominationRationale = document.getElementById('nominRat');
+        const studentConsent = document.getElementById('stuConsent');
+
+        // This variable stores all the data.
+        let data = 
+            '\r Student Name: ' + studentName.value + ' \r\n ' + 
+            'Student ID: ' + studentID.value + ' \r\n ' + 
+            'Scholarship Listing Number: ' + scholarshipLNumber.value + ' \r\n ' + 
+            'Student Type: ' + studentType.value + ' \r\n ' + 
+            'Student Faculty: ' + studentFaculty.value + ' \r\n ' + 
+            'Uploaded Supporting Document(s): ' + supportingFiles.value + ' \r\n ' + 
+            'Professor Nomination Rationale: ' + nominationRationale.value + ' \r\n ' + 
+            'Student Consent Obtained?: ' + studentConsent.value;
+        
+        // Convert the text to BLOB.
+        const textToBLOB = new Blob([data], { type: 'text/plain' });
+        const sFileName = 'New Scholarship: ' + studentName.value + '.txt';	   // The file to save the data.
+
+        let newLink = document.createElement("a");
+        newLink.download = sFileName;
+
+        if (window.webkitURL != null) {
+            newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+        }
+        else {
+            newLink.href = window.URL.createObjectURL(textToBLOB);
+            newLink.style.display = "none";
+            document.body.appendChild(newLink);
+        }
+
+        newLink.click(); 
+    }
+</script>
+<!-- End of code for Saving Nomination Application to .txt file -->
+
+
+</html>
