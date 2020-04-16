@@ -6,4 +6,4 @@ Faculty: Science
 Current Year: 2 
 Major: Computer Science
 GPA Previous Semester: 3.7
-Units Completed (Previous Year) : 28
+Units Completed (Previous Year) : 28.
